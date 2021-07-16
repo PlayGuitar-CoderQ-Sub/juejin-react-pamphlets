@@ -32,6 +32,7 @@
     "eslint-define-config": "^1.0.9",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "history": "^5.0.0",
     "husky": "^7.0.1",
     "less": "^4.1.1",
     "prettier": "^2.3.2",
