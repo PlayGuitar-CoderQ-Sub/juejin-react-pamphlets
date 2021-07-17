@@ -14,11 +14,16 @@ import {
 interface CountriesChartProps {
   data: Pick<CategoricalChartProps, 'data'>[];
   dataKey: string;
+  onClick: (e: { activeLabel: any }) => void;
 }
 
 import React from 'react';
 
-const CountriesChart: FC<CountriesChartProps> = ({ data, dataKey }) => {
+const CountriesChart: FC<CountriesChartProps> = ({
+  data,
+  dataKey,
+  onClick,
+}) => {
   return (
     <BarChart
       width={1200}
@@ -26,6 +31,7 @@ const CountriesChart: FC<CountriesChartProps> = ({ data, dataKey }) => {
       style={{ margin: 'auto' }}
       margin={{ top: 30, left: 20, right: 30 }}
       data={data}
+      onClick={onClick}
     >
       <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
       <XAxis dataKey="country" />

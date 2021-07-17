@@ -4,7 +4,7 @@ const BASE_URL = 'https://corona.lmao.ninja/v2';
 
 interface useCoronaProps {
   initialData?: any;
-  converter?: (data: any[]) => any[];
+  converter?: (data: { timeline: any }) => { timeline: any };
   refetchInterval?: any;
 }
 
@@ -23,7 +23,7 @@ export const useCoronaAPI = (
     const fetchData = async () => {
       const response = await fetch(`${BASE_URL}${path}`);
       const data = await response.json();
-      setData(convertData(data as any[]));
+      setData(convertData(data as any));
     };
     fetchData();
 
