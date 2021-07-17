@@ -1,40 +1,25 @@
 import type { FC } from 'react';
 import './index.less';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import GlobalStatsComponent from '@/components/GlobalStats';
 import SelectDataKey from '@/components/SelectDataKey';
 import CountriesChart from '@/components/CountriesChart';
 
-const BASE_URL = 'https://corona.lmao.ninja/v2';
+import { useCoronaAPI } from '@/hooks/useCornaAPI';
 
 const Dashborad: FC = () => {
-  const [globalStats, setGlobalStats] = useState({});
-  const [countries, setCountroes] = useState([]);
   const [key, setKey] = useState('cases');
 
-  useEffect(() => {
-    const fetchGlobalStats = async () => {
-      const response = await fetch(`${BASE_URL}/all`);
-      const data = await response.json();
-      setGlobalStats(data);
-    };
+  const globalStats = useCoronaAPI('/all', {
+    initialData: {},
+    refetchInterval: 5000,
+  });
 
-    fetchGlobalStats();
-    const intervalId = setInterval(fetchGlobalStats, 5000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
-    const featchCountries = async () => {
-      const response = await fetch(`${BASE_URL}/countries?sort=${key}`);
-      const data = await response.json();
-      setCountroes(data.slice(0, 10));
-    };
-
-    featchCountries();
-  }, [key]);
+  const countries = useCoronaAPI(`/countries?sort=${key}`, {
+    initialData: [],
+    converter: (data) => data.slice(0, 10),
+  });
 
   return (
     <div className="dashboard-content">
