@@ -1,48 +1,47 @@
-import React, {
-  useState,
-  useEffect,
-  useLayoutEffect,
-  createContext,
-} from 'react';
-import type { FC, Context } from 'react';
+import type { FC } from 'react';
+import './index.less';
+import React, { useState, useEffect } from 'react';
 
-import Tabbar from '@/components/Tabbar';
-import Tabs from '@/components/Tabs';
-import MimicryButton from '@/components/Button';
+import GlobalStatsComponent from '@/components/GlobalStats';
+import SelectDataKey from '@/components/SelectDataKey';
+import CountriesChart from '@/components/CountriesChart';
 
-export const CounteContext: Context<any> = createContext('Count');
+const BASE_URL = 'https://corona.lmao.ninja/v2';
 
 const Dashborad: FC = () => {
-  const [count, setCount] = useState(10);
-  const [titles, setTitles] = useState('测试');
-
-  useLayoutEffect(() => {
-    console.log('打印3');
-    document.title = '现在是首页f';
-  });
+  const [globalStats, setGlobalStats] = useState({});
+  const [countries, setCountroes] = useState([]);
+  const [key, setKey] = useState('cases');
 
   useEffect(() => {
-    console.log('打印1');
-
-    return () => {
-      console.log('打印2');
+    const fetchGlobalStats = async () => {
+      const response = await fetch(`${BASE_URL}/all`);
+      const data = await response.json();
+      setGlobalStats(data);
     };
-  }, [count]);
 
-  const onAddCount = () => {
-    setCount(count + 1);
-    setTitles(`${titles} qzj`);
-  };
+    fetchGlobalStats();
+    const intervalId = setInterval(fetchGlobalStats, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    const featchCountries = async () => {
+      const response = await fetch(`${BASE_URL}/countries?sort=${key}`);
+      const data = await response.json();
+      setCountroes(data.slice(0, 10));
+    };
+
+    featchCountries();
+  }, [key]);
 
   return (
-    <div>
-      <h2>现在的得数是: {count}</h2>
-      <button onClick={() => onAddCount()}>增加</button>
-      <Tabbar />
-      <CounteContext.Provider value={{ count: count }}>
-        <Tabs />
-        <MimicryButton title={titles} />
-      </CounteContext.Provider>
+    <div className="dashboard-content">
+      <h1>COVID-19</h1>
+      <GlobalStatsComponent stats={globalStats} />
+      <SelectDataKey onChange={(e) => setKey(e.target.value)} />
+      <CountriesChart data={countries} dataKey={key} />
     </div>
   );
 };

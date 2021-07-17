@@ -17,5 +17,12 @@ export default (): UserConfig => {
         },
       ],
     },
+    css: {
+      preprocessorOptions: {
+        less: {
+          javascriptEnabled: true,
+        },
+      },
+    },
   };
 };
