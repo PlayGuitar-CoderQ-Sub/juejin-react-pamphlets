@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 import React from 'react';
 
-const Chart: FC = () => {
+const TestApi: FC = () => {
   return (
     <div>
-      <span>新建</span>
+      <h1>App</h1>
     </div>
   );
 };
 
-export default Chart;
+export default TestApi;
