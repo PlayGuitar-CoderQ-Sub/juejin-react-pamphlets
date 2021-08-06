@@ -18,6 +18,7 @@ const Father: FC = () => {
       />
       <hr />
       <Son fatherSay={fatherSay} sayFather={setChildSay} />
+      <hr />
     </div>
   );
 };
