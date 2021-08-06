@@ -3,15 +3,14 @@ import { PartialRouteObject } from 'react-router';
 import { Route } from 'react-router-dom';
 import Father from '@/views/Father';
 import EventBusFather from '@/views/EventBusFather';
+import HooksTest from '@/views/HooksTest';
+import CallbackFather from '@/views/CallbackFather';
+import MemoTest from '@/views/MemoTest';
+import RefTest from '@/views/RefTest';
 
-export const FatherRoute: PartialRouteObject = {
-  path: '/',
-  element: <Route element={<Father />} />,
-};
-
-export const EventFatherRoute: PartialRouteObject = {
-  path: '/eventBus',
-  element: <Route element={<EventBusFather />} />,
-};
-
-export const routeList = [FatherRoute, EventFatherRoute];
+export const routeList: PartialRouteObject[] = [
+  {
+    path: '/',
+    element: <Route element={<RefTest />} />,
+  },
+];
