@@ -8,11 +8,12 @@ import { Route } from 'react-router-dom';
 // import MemoTest from '@/views/MemoTest';
 // import RefTest from '@/views/RefTest';
 // import MousePage from '@/views/Mouse';
-import RenderProps from '@/views/RenderProps';
+// import RenderProps from '@/views/RenderProps';
+import StudyState from '@/views/studayState';
 
 export const routeList: PartialRouteObject[] = [
   {
     path: '/',
-    element: <Route element={<RenderProps />} />,
+    element: <Route element={<StudyState />} />,
   },
 ];
