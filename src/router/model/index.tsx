@@ -9,11 +9,12 @@ import { Route } from 'react-router-dom';
 // import RefTest from '@/views/RefTest';
 // import MousePage from '@/views/Mouse';
 // import RenderProps from '@/views/RenderProps';
-import StudyState from '@/views/studayState';
+// import StudyState from '@/views/studayState';
+import FunState from '@/views/FunState';
 
 export const routeList: PartialRouteObject[] = [
   {
     path: '/',
-    element: <Route element={<StudyState />} />,
+    element: <Route element={<FunState />} />,
   },
 ];

@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 const RenderAll: FC = (props) => {
   //@ts-ignore
@@ -7,8 +7,7 @@ const RenderAll: FC = (props) => {
 };
 
 function getUserName(): string | null {
-  const name = parseInt(Math.random() * 10 + '') <= 5 ? '小于五' : null;
-  return name;
+  return parseInt(Math.random() * 10 + '') <= 5 ? '小于五' : null;
 }
 
 const Login: FC = (props) => {
@@ -49,7 +48,7 @@ const RenderPropsPage = () => {
       <Auth
         noLogin={() => <h1>Please login</h1>}
         login={(e) => <h1>你好啊，{e.userName}</h1>}
-      ></Auth>
+      />
     </>
   );
 };
