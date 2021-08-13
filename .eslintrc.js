@@ -37,13 +37,17 @@ module.exports = defineConfig({
   },
   // 继承别的规则
   extends: [
+    'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:prettier/recommended',
   ],
+  plugins: ['react-hooks'],
   // 规则
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/ban-ts-ignore': 'off',
     // 关闭要求在函数和类方法上有明确的返回类型
     '@typescript-eslint/explicit-function-return-type': 'off',

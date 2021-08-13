@@ -43,6 +43,7 @@ const Auth: FC<AuthProps> = (props) => {
 const RenderPropsPage = () => {
   return (
     <>
+      <h1></h1>
       <RenderAll>{() => <h1>hello world</h1>}</RenderAll>
       <Login>{(e) => <h1>hello {e.userName}</h1>}</Login>
       <Auth
