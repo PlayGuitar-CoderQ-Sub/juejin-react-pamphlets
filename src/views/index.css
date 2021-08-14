@@ -1,0 +1,41 @@
+.five-index {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-box {
+  display: flex;
+  width: 200px;
+  height: 80px;
+  margin: 0 20px 20px 0;
+  font-weight: bold;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dashboard {
+  height: 100vh;
+  background-image: url('../assets//bg.jpg');
+}
+
+.bg-blue {
+  background-color: #85a5ff;
+}
+
+.bg-purple {
+  background-color: #9254de;
+}
+
+.bg-red {
+  background-color: #f759ab;
+}
+
+.bg-green {
+  background-color: #73d13d;
+}
+
+.bg-cyan {
+  background-color: #13c2c2;
+}

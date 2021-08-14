@@ -1,20 +1,27 @@
 import React from 'react';
 import { PartialRouteObject } from 'react-router';
 import { Route } from 'react-router-dom';
-// import Father from '@/views/Father';
-// import EventBusFather from '@/views/EventBusFather';
-// import HooksTest from '@/views/HooksTest';
-// import CallbackFather from '@/views/CallbackFather';
-// import MemoTest from '@/views/MemoTest';
-// import RefTest from '@/views/RefTest';
-// import MousePage from '@/views/Mouse';
-import RenderProps from '@/views/RenderProps';
-// import StudyState from '@/views/studayState';
-// import FunState from '@/views/FunState';
+
+import IndexPage from '@/views';
+
+// 第二章：认识jsx
+import TwoJsx from '@/views/TwoJsx';
+// 第五章 深入props
+import FiveProps from '@/views/FiveProps';
 
 export const routeList: PartialRouteObject[] = [
   {
     path: '/',
-    element: <Route element={<RenderProps />} />,
+    element: <Route element={<IndexPage />} />,
+    children: [
+      {
+        path: '/five_props',
+        element: <Route element={<FiveProps />} />,
+      },
+      {
+        path: '/two_jsx',
+        element: <Route element={<TwoJsx />} />,
+      },
+    ],
   },
 ];
