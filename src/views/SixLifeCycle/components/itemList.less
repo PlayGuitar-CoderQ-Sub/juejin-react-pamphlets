@@ -1,0 +1,132 @@
+.goods_item {
+  position: relative;
+  display: flex;
+  padding-bottom: 16px;
+  margin-bottom: 50px;
+  line-height: 1 !important;
+  border: 1px solid red;
+  box-sizing: border-box;
+
+     .newPerson {
+        // top: -50px;
+        width: 122px;
+        height: 34px;
+        transform: translateY(7px);
+      }
+
+
+
+
+  .item_image {
+      width: 168px;
+      height: 168px;
+      border-radius: 12px;
+      transform: translateY(-2px);
+      transition: opacity 0.7s;
+  }
+
+  .item_content {
+      position: relative;
+      padding-left: 15px;
+      box-sizing: border-box;
+      flex: 1;
+
+      .goods_name {
+          display: -webkit-box;
+          min-height: 37px;
+          margin-bottom: 7px;
+          overflow: hidden;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0;
+          color: #303133;
+          text-overflow: -o-ellipsis-lastline;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+      }
+
+      // .go_share {
+      //     border-radius: 29px;
+      //     height: 58px;
+      //     width: 150px;
+      //     position: absolute;
+      //     bottom: 0;
+      //     right: 0;
+      //     line-height: 58px;
+      //     text-align: center;
+      //     font-family: HYYakuHei-GEW;
+      //     font-size: 26px;
+      //     color: #FFFFFF;
+      //     letter-spacing: 0;
+      // }
+
+
+      .new_price {
+          position: relative;
+          display: inline-block;
+          height: 25px;
+          margin-bottom: 2px;
+          margin-left: -1px;
+          transform: translateY(5px);
+
+          .view {
+              display: inline-block;
+              font-family: JDZhengHT-Regular;
+              letter-spacing: 0;
+              color: #f12e40;
+
+          }
+
+          .one {
+              transform: translateX(7px);
+          }
+
+          .two {
+              font-size: 42px;
+              line-height: 36px;
+              transform: translateX(-1px);
+          }
+
+          .three {
+              font-size: 26px;
+              transform: translateX(-7px);
+          }
+      }
+
+      .hold_price {
+          height: 12px;
+      }
+
+      .old_price {
+          display: inline-block;
+          margin-left: 2px;
+          font-family: JDZhengHT-Regular;
+          font-size: 26px !important;
+          letter-spacing: 0;
+          color: #C0C4CC !important;
+          text-decoration: line-through;
+          transform: translate(-5px,4px);
+      }
+
+      .goods_tag {
+          height: 30px;
+          margin-bottom: 33px;
+          transform: translateY(-2px);
+
+          .ziying {
+              width: 52px;
+              height: 30px;
+              margin-right: 5px;
+          }
+
+          .peisong {
+              width: 96px;
+              height: 30px;
+          }
+      }
+  }
+}

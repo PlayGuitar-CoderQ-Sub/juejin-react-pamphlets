@@ -8,6 +8,7 @@ import IndexPage from '@/views';
 import TwoJsx from '@/views/TwoJsx';
 // 第五章 深入props
 import FiveProps from '@/views/FiveProps';
+import SixLifeCycle from '@/views/SixLifeCycle';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -15,12 +16,16 @@ export const routeList: PartialRouteObject[] = [
     element: <Route element={<IndexPage />} />,
     children: [
       {
+        path: '/two_jsx',
+        element: <Route element={<TwoJsx />} />,
+      },
+      {
         path: '/five_props',
         element: <Route element={<FiveProps />} />,
       },
       {
-        path: '/two_jsx',
-        element: <Route element={<TwoJsx />} />,
+        path: '/six_lifeCycle',
+        element: <Route element={<SixLifeCycle />} />,
       },
     ],
   },

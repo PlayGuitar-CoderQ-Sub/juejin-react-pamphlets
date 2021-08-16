@@ -22,6 +22,7 @@ const Index: FC = () => {
         >
           第二章：认识jsx
         </div>
+
         <div className="title-box bg-red">第三章：起源Component</div>
         <div className="title-box bg-purple">第四章：玄学state</div>
         <div
@@ -29,6 +30,12 @@ const Index: FC = () => {
           onClick={() => navigateRoute('five_props')}
         >
           第五章：深入props
+        </div>
+        <div
+          className="title-box bg-cyan"
+          onClick={() => navigateRoute('six_lifeCycle')}
+        >
+          第六章：理解生命周期
         </div>
       </div>
 
