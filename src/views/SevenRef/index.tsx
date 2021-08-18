@@ -15,6 +15,10 @@ import RetweetsRef from './components/RetweetsRef';
 import RetweetsHoc from './components/RetweetsHoc';
 // ref实现组件通信
 import CommunicationRef from './components/CommunicationRef';
+// 函数组件 forwardRef + useImperativeHandle 通信
+import HooksCommRef from './components/hooksCommRef';
+// 函数组件缓存数据
+import FnComCacheData from './components/FnComCacheData';
 
 const SevenRef: FC = () => {
   return (
@@ -33,6 +37,10 @@ const SevenRef: FC = () => {
       <RetweetsHoc />
       <h2>ref实现组件通信, 看打印</h2>
       <CommunicationRef />
+      <h2>函数式组件</h2>
+      <HooksCommRef />
+      <h2>函数组件缓存数据</h2>
+      <FnComCacheData id={2} />
     </div>
   );
 };

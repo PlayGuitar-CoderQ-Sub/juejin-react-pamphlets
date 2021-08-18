@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 
 // 子组件
-function Son(props, ref) {
+function Son(_, ref) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputValue, setInputValue] = useState('');
   useImperativeHandle(
@@ -28,7 +28,13 @@ function Son(props, ref) {
   );
   return (
     <div>
-      <input placeholder="请输入内容" ref={inputRef} value={inputValue} />
+      <input
+        type="text"
+        placeholder="请输入内容"
+        ref={inputRef}
+        value={inputValue}
+        onChange={() => {}}
+      />
     </div>
   );
 }
