@@ -8,7 +8,10 @@ import IndexPage from '@/views';
 import TwoJsx from '@/views/TwoJsx';
 // 第五章 深入props
 import FiveProps from '@/views/FiveProps';
+// 第六章 理解lifecycle 生命周期
 import SixLifeCycle from '@/views/SixLifeCycle';
+// 第七章 多功能Ref
+import SevenRef from '@/views/SevenRef';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -26,6 +29,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: '/six_lifeCycle',
         element: <Route element={<SixLifeCycle />} />,
+      },
+      {
+        path: 'seven_ref',
+        element: <Route element={<SevenRef />} />,
       },
     ],
   },

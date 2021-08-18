@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'five_props' });
+    navigate({ pathname: 'seven_ref' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -36,6 +36,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('six_lifeCycle')}
         >
           第六章：理解生命周期
+        </div>
+
+        <div
+          className="title-box bg-orange"
+          onClick={() => navigateRoute('seven_ref')}
+        >
+          第七章：多功能Ref
         </div>
       </div>
 
