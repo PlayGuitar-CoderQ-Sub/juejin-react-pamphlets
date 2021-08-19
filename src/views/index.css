@@ -1,6 +1,7 @@
-.five-index {
+.header-index {
   display: flex;
   flex-wrap: wrap;
+  background-color: #FFF;
 }
 
 .title-box {
@@ -16,8 +17,7 @@
 }
 
 .dashboard {
-  height: 100vh;
-  background-image: url('../assets//bg.jpg');
+
 }
 
 .bg-blue {

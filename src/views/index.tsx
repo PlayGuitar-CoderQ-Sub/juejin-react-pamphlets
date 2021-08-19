@@ -15,7 +15,7 @@ const Index: FC = () => {
 
   return (
     <div>
-      <div className="five-index">
+      <div className="header-index">
         <div
           className="title-box bg-blue"
           onClick={() => navigateRoute('two_jsx')}
