@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'seven_ref' });
+    navigate({ pathname: 'eight_context' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -43,6 +43,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('seven_ref')}
         >
           第七章：多功能Ref
+        </div>
+
+        <div
+          className="title-box bg-mediumGreen "
+          onClick={() => navigateRoute('eight_context')}
+        >
+          第八章：提供者context
         </div>
       </div>
 

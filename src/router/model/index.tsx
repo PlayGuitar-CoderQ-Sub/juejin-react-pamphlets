@@ -12,6 +12,8 @@ import FiveProps from '@/views/FiveProps';
 import SixLifeCycle from '@/views/SixLifeCycle';
 // 第七章 多功能Ref
 import SevenRef from '@/views/SevenRef';
+// 第八章 提供者Context
+import EightContext from '@/views/EightContext';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -33,6 +35,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'seven_ref',
         element: <Route element={<SevenRef />} />,
+      },
+      {
+        path: 'eight_context',
+        element: <Route element={<EightContext />} />,
       },
     ],
   },
