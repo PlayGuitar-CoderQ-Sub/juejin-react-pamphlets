@@ -14,6 +14,8 @@ import SixLifeCycle from '@/views/SixLifeCycle';
 import SevenRef from '@/views/SevenRef';
 // 第八章 提供者Context
 import EightContext from '@/views/EightContext';
+// 第九章 css模块化
+import NineCssModule from '@/views/NineCssModule';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -39,6 +41,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'eight_context',
         element: <Route element={<EightContext />} />,
+      },
+      {
+        path: 'nine_css',
+        element: <Route element={<NineCssModule />} />,
       },
     ],
   },
