@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'nine_css' });
+    navigate({ pathname: 'ten_hoc' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -57,6 +57,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('eight_context')}
         >
           第九章： css模块
+        </div>
+
+        <div
+          className="title-box bg-lightcoral"
+          onClick={() => navigateRoute('ten_hoc')}
+        >
+          第十章： 高阶组件
         </div>
       </div>
 

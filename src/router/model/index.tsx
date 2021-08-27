@@ -16,6 +16,8 @@ import SevenRef from '@/views/SevenRef';
 import EightContext from '@/views/EightContext';
 // 第九章 css模块化
 import NineCssModule from '@/views/NineCssModule';
+// 第十章 高阶组件模块
+import TenHoc from '@/views/TenHoc';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -45,6 +47,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'nine_css',
         element: <Route element={<NineCssModule />} />,
+      },
+      {
+        path: 'ten_hoc',
+        element: <Route element={<TenHoc />} />,
       },
     ],
   },
