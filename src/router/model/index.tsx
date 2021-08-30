@@ -18,6 +18,8 @@ import EightContext from '@/views/EightContext';
 import NineCssModule from '@/views/NineCssModule';
 // 第十章 高阶组件模块
 import TenHoc from '@/views/TenHoc';
+// 第十一章 渲染控制
+import ElevenRender from '@/views/ElevenRender';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -51,6 +53,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'ten_hoc',
         element: <Route element={<TenHoc />} />,
+      },
+      {
+        path: 'eleven_render',
+        element: <Route element={<ElevenRender />} />,
       },
     ],
   },

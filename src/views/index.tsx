@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'ten_hoc' });
+    navigate({ pathname: 'eleven_render' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -64,6 +64,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('ten_hoc')}
         >
           第十章： 高阶组件
+        </div>
+
+        <div
+          className="title-box bg-gord"
+          onClick={() => navigateRoute('eleven_render')}
+        >
+          第十一章： 渲染控制
         </div>
       </div>
 
