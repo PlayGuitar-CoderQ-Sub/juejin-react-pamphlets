@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'eleven_render' });
+    navigate({ pathname: 'twelve_optimize' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -71,6 +71,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('eleven_render')}
         >
           第十一章： 渲染控制
+        </div>
+
+        <div
+          className="title-box bg-dimgray"
+          onClick={() => navigateRoute('twelve_optimize')}
+        >
+          第十二章： 渲染调优
         </div>
       </div>
 

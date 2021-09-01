@@ -16,10 +16,6 @@
   cursor: pointer;
 }
 
-.dashboard {
-
-}
-
 .bg-blue {
   background-color: #85a5ff;
 }
@@ -58,4 +54,8 @@
 
 .bg-gord {
   background-color: #FFD700;
+}
+
+.bg-dimgray {
+  background-color: #696969;
 }

@@ -41,7 +41,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "vite.config.ts"
-  ],
+, "src/views/TwelveOptimizes/test.tss"  ],
   "exclude": [
     "node_modules",
     "dist",

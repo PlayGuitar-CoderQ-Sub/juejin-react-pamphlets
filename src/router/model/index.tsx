@@ -20,6 +20,8 @@ import NineCssModule from '@/views/NineCssModule';
 import TenHoc from '@/views/TenHoc';
 // 第十一章 渲染控制
 import ElevenRender from '@/views/ElevenRender';
+// 第十二章 渲染调优
+import TwelveOptimizes from '@/views/TwelveOptimizes';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -57,6 +59,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'eleven_render',
         element: <Route element={<ElevenRender />} />,
+      },
+      {
+        path: 'twelve_optimize',
+        element: <Route element={<TwelveOptimizes />} />,
       },
     ],
   },
