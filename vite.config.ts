@@ -1,6 +1,7 @@
 import type { UserConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
 import { resolve } from 'path';
+
+import { createPluginVite } from './build/vite';
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -8,7 +9,7 @@ function pathResolve(dir: string) {
 
 export default (): UserConfig => {
   return {
-    plugins: [reactRefresh()],
+    plugins: createPluginVite(),
     resolve: {
       alias: [
         {
