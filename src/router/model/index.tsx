@@ -22,6 +22,8 @@ import TenHoc from '@/views/TenHoc';
 import ElevenRender from '@/views/ElevenRender';
 // 第十二章 渲染调优
 import TwelveOptimizes from '@/views/TwelveOptimizes';
+// 第十三章 处理海量数据
+import ThirteenData from '@/views/ThirteenData';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -63,6 +65,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'twelve_optimize',
         element: <Route element={<TwelveOptimizes />} />,
+      },
+      {
+        path: 'thirteen_data',
+        element: <Route element={<ThirteenData />} />,
       },
     ],
   },
