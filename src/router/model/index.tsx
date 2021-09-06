@@ -24,6 +24,8 @@ import ElevenRender from '@/views/ElevenRender';
 import TwelveOptimizes from '@/views/TwelveOptimizes';
 // 第十三章 处理海量数据
 import ThirteenData from '@/views/ThirteenData';
+// 第十四章 细节处理
+import FourteenOpSustained from '@/views/FourteenOpSustained';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -69,6 +71,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'thirteen_data',
         element: <Route element={<ThirteenData />} />,
+      },
+      {
+        path: 'fourteen_opt',
+        element: <Route element={<FourteenOpSustained />} />,
       },
     ],
   },

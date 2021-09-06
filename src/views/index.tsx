@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'thirteen_data' });
+    navigate({ pathname: 'fourteen_opt' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -85,6 +85,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('thirteen_data')}
         >
           第十三章： 处理海量数据
+        </div>
+
+        <div
+          className="title-box bg-lightGrey"
+          onClick={() => navigateRoute('fourteen_opt')}
+        >
+          第十四章： 优化篇细节处理
         </div>
       </div>
 

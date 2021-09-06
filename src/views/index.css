@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.bg-lightGrey {
+  background-color: #D3D3D3;
+}
+
 .bg-slateBlue {
   background-color: #7B68EE;
 }
