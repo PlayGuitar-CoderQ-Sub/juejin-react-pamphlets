@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'fourteen_opt' });
+    navigate({ pathname: 'fifteen_event' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -92,6 +92,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('fourteen_opt')}
         >
           第十四章： 优化篇细节处理
+        </div>
+
+        <div
+          className="title-box bg-fifteen"
+          onClick={() => navigateRoute('fifteen_event')}
+        >
+          第十五章： 事件处理
         </div>
       </div>
 

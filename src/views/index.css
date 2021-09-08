@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.bg-fifteen {
+  background-color: #ec3f0b;
+}
+
 .bg-lightGrey {
   background-color: #D3D3D3;
 }

@@ -26,6 +26,8 @@ import TwelveOptimizes from '@/views/TwelveOptimizes';
 import ThirteenData from '@/views/ThirteenData';
 // 第十四章 细节处理
 import FourteenOpSustained from '@/views/FourteenOpSustained';
+// 第十五章 事件处理
+import FifteenEvent from '@/views/FifteenEvent';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -75,6 +77,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'fourteen_opt',
         element: <Route element={<FourteenOpSustained />} />,
+      },
+      {
+        path: 'fifteen_event',
+        element: <Route element={<FifteenEvent />} />,
       },
     ],
   },
