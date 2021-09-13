@@ -28,6 +28,8 @@ import ThirteenData from '@/views/ThirteenData';
 import FourteenOpSustained from '@/views/FourteenOpSustained';
 // 第十五章 事件处理
 import FifteenEvent from '@/views/FifteenEvent';
+// 第十六章 调度与时间片
+import SixTeenTimeSect from '@/views/SixteenTimeSect';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -81,6 +83,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'fifteen_event',
         element: <Route element={<FifteenEvent />} />,
+      },
+      {
+        path: 'sixTeen_timeSect',
+        element: <Route element={<SixTeenTimeSect />} />,
       },
     ],
   },
