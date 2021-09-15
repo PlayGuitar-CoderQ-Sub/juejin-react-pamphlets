@@ -30,6 +30,8 @@ import FourteenOpSustained from '@/views/FourteenOpSustained';
 import FifteenEvent from '@/views/FifteenEvent';
 // 第十六章 调度与时间片
 import SixTeenTimeSect from '@/views/SixteenTimeSect';
+// 第十七章 调和与Fibe
+import SeventeenFibe from '@/views/SeventeenthFibe';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -87,6 +89,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'sixTeen_timeSect',
         element: <Route element={<SixTeenTimeSect />} />,
+      },
+      {
+        path: 'seventeen_fibe',
+        element: <Route element={<SeventeenFibe />} />,
       },
     ],
   },

@@ -6,7 +6,7 @@ import './index.css';
 const Index: FC = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ pathname: 'sixTeen_timeSect' });
+    navigate({ pathname: 'seventeen_fibe' });
   }, []);
 
   const navigateRoute = (routeName: string) => {
@@ -106,6 +106,13 @@ const Index: FC = () => {
           onClick={() => navigateRoute('fifteen_event')}
         >
           第十六章： 调度与时间切片
+        </div>
+
+        <div
+          className="title-box bg-purpleTwo"
+          onClick={() => navigateRoute('seventeen_fibe')}
+        >
+          第十七章： 调度与Fibe
         </div>
       </div>
 
