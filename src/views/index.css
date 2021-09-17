@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.bg-greenTwo {
+  background-color: #75ecd3;
+}
+
 .bg-purpleTwo {
   background-color: #7a067e;
 }

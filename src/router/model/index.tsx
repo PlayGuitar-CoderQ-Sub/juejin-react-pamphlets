@@ -32,6 +32,8 @@ import FifteenEvent from '@/views/FifteenEvent';
 import SixTeenTimeSect from '@/views/SixteenTimeSect';
 // 第十七章 调和与Fibe
 import SeventeenFibe from '@/views/SeventeenthFibe';
+// 第十八章 Hooks原理
+import EighteenHooksPrinciple from '@/views/EighteenHooksPrinciple';
 
 export const routeList: PartialRouteObject[] = [
   {
@@ -93,6 +95,10 @@ export const routeList: PartialRouteObject[] = [
       {
         path: 'seventeen_fibe',
         element: <Route element={<SeventeenFibe />} />,
+      },
+      {
+        path: 'eighteen_hooks',
+        element: <Route element={<EighteenHooksPrinciple />} />,
       },
     ],
   },
